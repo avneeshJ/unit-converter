@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="converter-card">
+
+            <div class="header">
+                <h1>Unit Converter</h1>
+                <p>Convert length, weight and temperature instantly.</p>
+            </div>
+
+            <div class="category-buttons">
+                <button class="category active" data-category="length">
+                    Length
+                </button>
+
+                <button class="category" data-category="weight">
+                    Weight
+                </button>
+
+                <button class="category" data-category="temperature">
+                    Temperature
+                </button>
+            </div>
+
+            <div class="converter">
+
+                <div class="input-section">
+                    <label for="fromValue">From</label>
+
+                    <div class="input-row">
+                        <input
+                            type="number"
+                            id="fromValue"
+                            value="1"
+                            step="any"
+                        >
+
+                        <select id="fromUnit"></select>
+                    </div>
+                </div>
+
+                <button id="swapButton" class="swap-button" title="Swap units">
+                    ⇄
+                </button>
+
+                <div class="input-section">
+                    <label for="toValue">To</label>
+
+                    <div class="input-row">
+                        <input
+                            type="number"
+                            id="toValue"
+                            readonly
+                        >
+
+                        <select id="toUnit"></select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="result-section">
+                <p class="result-label">Result</p>
+                <h2 id="result">1 meter = 100 centimeters</h2>
+            </div>
+
+            <div class="formula-section">
+                <p class="formula-title">Formula used</p>
+                <p id="formula">1 m × 100 = 100 cm</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
